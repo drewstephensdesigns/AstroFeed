@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/capsule_iv"
+        android:layout_width="@dimen/thumbail_size"
+        android:layout_height="@dimen/thumbail_size"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        app:strokeWidth="1dp"
+        app:strokeColor="?android:attr/colorControlNormal"
+        app:shapeAppearanceOverlay="@style/circleImageView"
+        android:contentDescription="@string/starlink_iv_cd">
+    </com.google.android.material.imageview.ShapeableImageView>
+
+    <TextView
+        android:id="@+id/text_capsule_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/capsule_iv"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        android:textAppearance="@style/TextAppearance.Material3.TitleSmall"
+
+        tools:text="Dragon 2.0" />
+
+    <TextView
+        android:id="@+id/text_capsule_serial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_capsule_type"
+        android:layout_toEndOf="@id/capsule_iv"
+        android:layout_marginStart="16dp"
+        android:textAppearance="@style/TextAppearance.Material3.LabelSmall"
+        android:fontFamily="@font/roboto"
+        tools:text="C101" />
+
+    <TextView
+        android:id="@+id/text_capsule_status_summary"
+        android:layout_width="250dp"
+        android:layout_height="25dp"
+        android:layout_below="@id/text_capsule_serial"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
+        android:layout_toEndOf="@id/capsule_iv"
+        android:maxLines="3"
+        android:ellipsize="end"
+        android:textStyle="italic"
+        android:textAppearance="@style/TextAppearance.Material3.LabelSmall"
+        tools:text="Hanging in atrium at SpaceX" />
+
+
+    <TextView
+        android:id="@+id/text_capsule_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.Material3.LabelSmall"
+        android:fontFamily="@font/roboto"
+        tools:text="active" />
+
+</RelativeLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?android:attr/selectableItemBackground"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:orientation="vertical">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/rocket_iv"
+        android:layout_width="350dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="5dp"
+        app:strokeWidth="1dp"
+        android:layout_gravity="center_horizontal"
+        app:strokeColor="?android:attr/colorControlNormal"
+        app:shapeAppearanceOverlay="@style/circleImageView"
+        android:contentDescription="@string/starlink_iv_cd">
+    </com.google.android.material.imageview.ShapeableImageView>
+
+    <TextView
+        android:id="@+id/text_rocket_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:layout_marginTop="@dimen/medium_margin"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+        android:fontFamily="@font/noto_sans"
+        android:textColor="?android:attr/colorControlNormal"
+        tools:text="Falcon Deez Nuts" />
+
+    <TextView
+        android:id="@+id/text_rocket_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="8dp"
+        android:textColor="?android:attr/colorControlNormal"
+        android:textStyle="italic"
+        android:fontFamily="@font/roboto"
+        tools:text="@string/description_placeholder" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/vehicle_specs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/medium_margin"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginBottom="@dimen/small_margin"
+        android:layout_gravity="end"
+        tools:text="Vehicle Specs" />
+
+</LinearLayout>

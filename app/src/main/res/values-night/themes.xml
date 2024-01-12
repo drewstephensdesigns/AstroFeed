@@ -1,0 +1,53 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.AstroFeed" parent="Theme.Material3.DayNight">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/blue_700</item>
+        <item name="colorPrimaryVariant">@color/blue_700</item>
+        <item name="colorOnPrimary">@color/black</item>
+
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/blue_200</item>
+        <item name="colorSecondaryVariant">@color/blue_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/black</item>
+        <!-- Customize your theme here. -->
+
+        <item name="android:textColor">@color/dark_silver</item>
+
+        <!-- Bottom Nav -->
+        <item name="iconTint">@color/blue_200</item>
+        <item name="android:colorControlNormal">@color/dark_silver</item>
+
+
+        <!-- Sheets: https://github.com/maxkeppeler/sheets -->
+        <item name="sheetsTitleColor">@color/silver</item>
+        <item name="sheetsPrimaryColor">@color/silver</item>
+        <item name="sheetsHighlightColor">@color/blue_200</item>
+        <item name="sheetsDividerColor">@color/silver</item>
+        <item name="sheetsContentColor">@color/silver</item>
+        <item name="sheetsContentFont">@font/roboto</item>
+        <item name="sheetsTitleFont">@font/noto_sans</item>
+        <item name="sheetsNegativeButtonColor">@color/blue_200</item>
+    </style>
+
+    <style name="circleImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20%</item>
+    </style>
+
+    <!-- style="@style/AppTextButton.Icon" -->
+
+    <style name="AppButton" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">?attr/colorSecondary</item>
+    </style>
+
+    <style name="AppTextButton.Icon" parent="Widget.MaterialComponents.Button.TextButton.Icon">
+        <item name="android:textColor">@color/colorSecondary</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+</resources>

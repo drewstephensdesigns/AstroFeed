@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/icon_about_company"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/ic_rockets"
+        android:contentDescription="@string/title_company"/>
+
+    <TextView
+        android:id="@+id/text_about_company"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/icon_about_company"
+        android:layout_alignTop="@id/icon_about_company"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/roboto"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+        tools:text="About Space X" />
+
+    <ImageView
+        android:id="@+id/icon_about_developer"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/ic_dev_mode"
+        android:layout_below="@id/icon_about_company"
+        android:contentDescription="@string/title_company"/>
+
+    <TextView
+        android:id="@+id/text_about_developer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/icon_about_developer"
+        android:layout_alignTop="@id/icon_about_developer"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/roboto"
+        android:layout_below="@id/text_about_company"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+        tools:text="About Devloper" />
+
+    <ImageView
+        android:id="@+id/icon_change_theme"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/ic_light_mode"
+        android:layout_below="@id/icon_about_developer"
+        android:contentDescription="@string/title_company"/>
+
+    <TextView
+        android:id="@+id/text_change_theme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/icon_change_theme"
+        android:layout_alignTop="@id/icon_change_theme"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/roboto"
+        android:layout_below="@id/text_about_developer"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+        tools:text="@string/action_change_theme" />
+
+</RelativeLayout>

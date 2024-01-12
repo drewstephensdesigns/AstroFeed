@@ -1,0 +1,82 @@
+<resources>
+
+    <!-- App Screens-->
+    <string name="app_name">AstroFeed</string>
+    <string name="title_news">News</string>
+    <string name="title_launches">Launches</string>
+    <string name="title_rockets">Rockets</string>
+    <string name="title_payloads">Payloads</string>
+    <string name="title_settings">Settings</string>
+    <string name="title_company">SpaceX</string>
+    <string name="title_about">About</string>
+
+    <!-- Action Strings -->
+    <string name="action_sort">Sort</string>
+    <string name="action_vehicle_specs">Vehicle Specs</string>
+    <string name="action_change_theme">Theme</string>
+    <string name="action_view_article">View Article</string>
+
+    <!-- Originator Long Form Text -->
+    <string name="afetr">Air Force Eastern Test Range (Florida)</string>
+    <string name="afwtr">Air Force Western Test Range (California)</string>
+    <string name="text_status_cancelled">Cancelled</string>
+    <string name="text_status_development">In Development</string>
+
+    <!-- API Source -->
+    <string name="spacex_api">Space X API</string>
+    <string name="spacex_api_url" translatable="false">https://github.com/r-spacex/SpaceX-API</string>
+
+    <string name="spacex_website">SpaceX Website</string>
+    <string name="spacex_url" translatable="false">https://www.spacex.com</string>
+
+    <string name="spacex_flickr_website">SpaceX Flickr</string>
+    <string name="spacex_flickr_url">https://www.flickr.com/photos/spacex/</string>
+
+    <!-- Content Descriptions -->
+    <string name="starlink_iv_cd">Image view for Starlink missions</string>
+    <string name="detail_fragment_image_content_desc">Rocket Image from Flickr</string>
+    <string name="fab_filter_cd">Filter Selection</string>
+    <string name="description_placeholder">Falcon 9 is a two-stage rocket designed and manufactured by SpaceX for the reliable and safe transport of satellites</string>
+
+    <!-- Placeholders -->
+    <string name="stages_placeholder">Stages: %s</string>
+    <string name="empty_content_sign">0</string>
+    <string name="rocket_cost">$ %s</string>
+    <string name="rocket_thrust">%s kN</string>
+    <string name="height_placeholder">%s Feet</string>
+    <string name="company_valuation">$ %1$s</string>
+    <string name="company_founder">Founded By %s</string>
+    <string name="company_address">%1$s, %2$s, %3$s</string>
+    <string name="article_published_at">Published: %s</string>
+
+    <!-- Headers -->
+    <string name="title_status_header">Active</string>
+    <string name="title_capsule_status_header">Status</string>
+    <string name="success_rating">Success Rating</string>
+    <string name="engine_type">Engine Type</string>
+    <string name="rocket_type_header">Type</string>
+    <string name="boosters">Boosters</string>
+    <string name="first_flight">First Flight</string>
+    <string name="title_capsules">Capsules</string>
+    <string name="thrust_header">Thrust at Liftoff</string>
+    <string name="cost_header">Cost Per Launch</string>
+    <string name="propellant1">Propellant 1</string>
+    <string name="propellant2">Propellant 2</string>
+    <string name="stages_header">Stages</string>
+    <string name="height_header">Height</string>
+    <string name="title_spacex">SpaceX</string>
+    <string name="title_summary">Summary</string>
+
+    <!-- Company Profile -->
+    <string name="title_resources">Company Profile</string>
+    <string name="title_founded_year">Founded</string>
+    <string name="title_launch_count">Launch Count</string>
+    <string name="title_launch_success">Successful Launches</string>
+    <string name="title_launch_fails">Failed Launches</string>
+    <string name="title_pending_launches">Pending Launches</string>
+    <string name="spacex_pin_location">1 Rocket HQ, Hawthorne, California</string>
+    <string name="title_headquarters">Location</string>
+    <string name="show_headquarters_location_in_google_maps">Google Maps location of headquarters</string>
+
+
+</resources>

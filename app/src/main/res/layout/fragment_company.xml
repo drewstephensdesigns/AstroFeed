@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/loading"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="12dp"
+            android:indeterminate="true"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/image_logo"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/title_spacex" />
+
+        <TextView
+            android:id="@+id/text_founder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:textStyle="bold"
+            android:text="@string/company_founder"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_logo" />
+
+        <TextView
+            android:id="@+id/text_summary"
+            tools:text="SpaceX designs, manufactures and launches advanced rockets
+                    and spacecraft. The company was founded in 2002 to revolutionize space
+                    technology, with the ultimate goal of enabling people to live on other planets."
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="18dp"
+
+            android:justificationMode="inter_word"
+            android:fontFamily="@font/noto_sans"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_founder" />
+
+        <TextView
+            android:id="@+id/text_resources_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/title_resources"
+            android:fontFamily="@font/noto_sans"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_summary" />
+
+        <TextView
+            android:id="@+id/text_title_founded_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/title_founded_year"
+            app:layout_constraintEnd_toStartOf="@+id/text_founded_year"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_resources_title" />
+
+        <TextView
+            android:id="@+id/text_founded_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/empty_content_sign"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/text_title_founded_year"
+            app:layout_constraintTop_toTopOf="@+id/text_title_founded_year" />
+
+        <TextView
+            android:id="@+id/text_title_launch_count"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/title_launch_count"
+            app:layout_constraintStart_toStartOf="@+id/text_title_founded_year"
+            app:layout_constraintTop_toBottomOf="@+id/text_title_founded_year" />
+
+        <TextView
+            android:id="@+id/text_launch_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/empty_content_sign"
+            app:layout_constraintEnd_toEndOf="@+id/text_founded_year"
+            app:layout_constraintTop_toTopOf="@+id/text_title_launch_count" />
+
+        <TextView
+            android:id="@+id/text_title_success"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/title_launch_success"
+            app:layout_constraintStart_toStartOf="@+id/text_title_launch_count"
+            app:layout_constraintTop_toBottomOf="@+id/text_title_launch_count" />
+
+        <TextView
+            android:id="@+id/text_success"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/empty_content_sign"
+            app:layout_constraintEnd_toEndOf="@+id/text_launch_count"
+            app:layout_constraintTop_toTopOf="@+id/text_title_success" />
+
+        <TextView
+            android:id="@+id/text_title_launch_fails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/title_launch_fails"
+            app:layout_constraintStart_toStartOf="@+id/text_title_success"
+            app:layout_constraintTop_toBottomOf="@+id/text_title_success" />
+
+        <TextView
+            android:id="@+id/text_launch_fails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/empty_content_sign"
+            app:layout_constraintEnd_toEndOf="@+id/text_success"
+            app:layout_constraintTop_toTopOf="@+id/text_title_launch_fails" />
+
+
+        <TextView
+            android:id="@+id/text_title_headquarters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/title_headquarters"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:fontFamily="@font/noto_sans"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_launch_fails" />
+
+        <ImageView
+            android:id="@+id/image_location_pin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:contentDescription="@string/show_headquarters_location_in_google_maps"
+            app:layout_constraintBottom_toBottomOf="@+id/text_title_headquarters"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/text_title_headquarters"
+            app:layout_constraintTop_toTopOf="@+id/text_title_headquarters"
+            app:srcCompat="@drawable/ic_pin_location" />
+
+        <TextView
+            android:id="@+id/text_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/spacex_pin_location"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_title_headquarters" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/website_button"
+            android:layout_width="160dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_address"
+            android:text="@string/spacex_website"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/flickr_button"
+            android:layout_width="160dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/website_button"
+            android:text="@string/spacex_flickr_website"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

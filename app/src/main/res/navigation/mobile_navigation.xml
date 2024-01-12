@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_news">
+
+    <fragment
+        android:id="@+id/stages"
+        android:name="com.github.drewstephensdesigns.astrofeed.ui.TabbedFragment"
+        android:label="@string/title_news"
+        tools:layout="@layout/tabbed_fragment" />
+
+
+    <!-- News -->
+    <fragment
+        android:id="@+id/navigation_news"
+        android:name="com.github.drewstephensdesigns.astrofeed.ui.NewsFragment"
+        android:label="@string/title_news"
+        tools:layout="@layout/fragment_news" />
+
+        <!-- Capsules -->
+    <fragment
+        android:id="@+id/navigation_capsules"
+        android:name="com.github.drewstephensdesigns.astrofeed.ui.CapsulesFragment"
+        android:label="@string/title_capsules"
+        tools:layout="@layout/fragment_capsules" />
+
+    <!-- Launches
+    <fragment
+        android:id="@+id/navigation_launches"
+        android:name="com.github.drewstephensdesigns.astrofeed.ui.LaunchesFragment"
+        android:label="@string/title_launches"
+        tools:layout="@layout/fragment_launches" />-->
+
+    <!-- Launch Vehicles -->
+    <fragment
+        android:id="@+id/navigation_rockets"
+        android:name="com.github.drewstephensdesigns.astrofeed.ui.RocketsFragment"
+        android:label="@string/title_rockets"
+        tools:layout="@layout/fragment_rockets" >
+        <action
+            android:id="@+id/action_rocket_detail_dest"
+            app:destination="@id/navigation_rocket_details_dest" />
+    </fragment>
+
+    <!-- Launch Vehicles Details -->
+    <fragment
+        android:id="@+id/navigation_rocket_details_dest"
+        android:name="com.github.drewstephensdesigns.astrofeed.ui.RocketDetailsFragment"
+        tools:layout="@layout/fragment_rocket_details">
+
+        <!-- This is a bug with Android Studio -->
+        <!-- https://issuetracker.google.com/issues/293665984 -->
+        <argument
+            android:name="rocketImage"
+            app:argType="string"
+            app:nullable="true" />
+
+        <argument
+            android:name="rocketType"
+            app:argType="string"
+            app:nullable="false" />
+
+        <argument
+            android:name="rocketBoosters"
+            app:argType="integer"
+            app:nullable="false" />
+
+        <argument
+            android:name="rocketStatus"
+            app:argType="boolean"
+            app:nullable="false" />
+
+        <argument
+            android:name="rocketFirstFlight"
+            app:argType="string"
+            app:nullable="false" />
+
+        <argument
+            android:name="rocketSummary"
+            app:argType="string"
+            app:nullable="false" />
+
+        <argument
+            android:name="rocketSummaryLink"
+            app:argType="string"
+            app:nullable="false" />
+
+        <argument
+            android:name="rocketSuccessRate"
+            app:argType="integer"
+            app:nullable="false" />
+
+        <argument
+            android:name="rocketEngineType"
+            app:argType="string"
+            app:nullable="false" />
+
+        <argument
+            android:name="rocketPropellant1"
+            app:argType="string"
+            app:nullable="false" />
+
+        <argument
+            android:name="rocketPropellant2"
+            app:argType="string"
+            app:nullable="false" />
+
+        <argument
+            android:name="rocketThrust"
+            app:argType="integer"
+            app:nullable="false" />
+
+        <argument
+            android:name="rocketCost"
+            app:argType="integer"
+            app:nullable="false" />
+
+        <argument
+            android:name="rocketStages"
+            app:argType="integer"
+            app:nullable="false" />
+
+    </fragment>
+
+    <!-- About Main Fragment -->
+    <fragment
+        android:id="@+id/navigation_about"
+        android:name="com.github.drewstephensdesigns.astrofeed.ui.AboutFragment"
+        android:label="@string/title_about"
+        tools:layout="@layout/fragment_about" />
+
+    <!-- Company Fragment -->
+    <fragment
+        android:id="@+id/navigation_company"
+        android:name="com.github.drewstephensdesigns.astrofeed.ui.CompanyFragment"
+        android:label="@string/title_company"
+        tools:layout="@layout/fragment_company" />
+
+</navigation>
