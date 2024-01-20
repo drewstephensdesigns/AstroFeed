@@ -79,6 +79,11 @@
             app:argType="string"
             app:nullable="true" />
 
+        <argument
+            android:name="launchTime"
+            app:argType="string"
+            app:nullable="true" />
+
     </fragment>
 
     <!-- Launch Vehicles -->

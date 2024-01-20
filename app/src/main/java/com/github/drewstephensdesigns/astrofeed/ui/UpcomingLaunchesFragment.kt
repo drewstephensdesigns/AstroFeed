@@ -100,7 +100,8 @@ class UpcomingLaunchesFragment : Fragment(), UpcomingLaunchesAdapter.LaunchClick
             launch.status?.description,
             launch.pad?.name,
             launch.pad?.mapImage,
-            launch.pad?.mapUrl
+            launch.pad?.mapUrl,
+            launch.net!!
         )
         navController.navigate(action)
     }

@@ -1,6 +1,7 @@
 package com.github.drewstephensdesigns.astrofeed.ui
 
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,6 +13,11 @@ import com.github.drewstephensdesigns.astrofeed.databinding.FragmentLaunchDetail
 import com.github.drewstephensdesigns.astrofeed.utils.Config.loadImage
 import com.github.drewstephensdesigns.astrofeed.utils.openWebLink
 import com.google.android.material.transition.MaterialSharedAxis
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
+import java.util.TimeZone
+import java.util.concurrent.TimeUnit
 
 class LaunchDetailsFragment : Fragment() {
 
@@ -19,8 +25,6 @@ class LaunchDetailsFragment : Fragment() {
 
     private var _binding: FragmentLaunchDetailsBinding? = null
     private val binding get() = _binding!!
-
-    private val upcoming : Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,6 +47,48 @@ class LaunchDetailsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initViews()
+
+        val launchTimeStr = launchArgs.launchTime
+        val launchTime = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.getDefault()).parse(launchTimeStr!!)
+
+        // Call a method to start the countdown
+        startCountdown(launchTime!!)
+    }
+
+    private fun startCountdown(launchTime: Date) {
+
+        // Convert GMT time to local time
+        val localTimeZone = TimeZone.getDefault()
+        val gmtTimeZone = TimeZone.getTimeZone("GMT")
+        val offset = localTimeZone.rawOffset - gmtTimeZone.rawOffset
+        val launchTimeLocal = Date(launchTime.time + offset)
+
+
+        object : CountDownTimer(launchTimeLocal.time - System.currentTimeMillis(), 1000) {
+            override fun onTick(millisUntilFinished: Long) {
+                val days = TimeUnit.MILLISECONDS.toDays(millisUntilFinished)
+                val hours = TimeUnit.MILLISECONDS.toHours(millisUntilFinished) % 24
+                val minutes = TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished) % 60
+                val seconds = TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) % 60
+
+                val countdownText = String.format(
+                    Locale.getDefault(),
+                    "T - %02d days %02d:%02d:%02d",
+                    days,
+                    hours,
+                    minutes,
+                    seconds
+                )
+
+                // Update UI with countdown (e.g., set a TextView)
+                binding.textLaunchCountdown.text = countdownText
+            }
+
+            override fun onFinish() {
+                // Handle countdown finish if needed
+                binding.textLaunchCountdown.text = context?.resources?.getString(R.string.title_launch_go)
+            }
+        }.start()
     }
 
     private fun initViews(){
@@ -58,10 +104,6 @@ class LaunchDetailsFragment : Fragment() {
             if(launchArgs.missionName == "PACE (Plankton, Aerosol, Cloud, ocean Ecosystem)"){
                 patchIv.loadImage("https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/logo/national2520aeronautics2520and2520space2520administration_logo_20190207032448.png")
             }
-
-            // Countdown
-
-            //textLaunchCountdown.text = launchArgs.s
 
            // Mission Name/Details
             textLaunchMission.text = launchArgs.missionName
