@@ -17,7 +17,7 @@
         app:strokeWidth="1dp"
         android:layout_gravity="center_horizontal"
         app:strokeColor="?android:attr/colorControlNormal"
-        app:shapeAppearanceOverlay="@style/circleImageView"
+        app:shapeAppearanceOverlay="@style/newsCircleImageView"
         android:contentDescription="@string/starlink_iv_cd">
     </com.google.android.material.imageview.ShapeableImageView>
 
@@ -28,7 +28,7 @@
         android:layout_marginStart="@dimen/small_margin"
         android:layout_marginEnd="@dimen/small_margin"
         android:layout_marginTop="@dimen/small_margin"
-        android:layout_gravity=""
+        android:layout_gravity="center_horizontal"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
         android:fontFamily="@font/noto_sans"
         android:textColor="?android:attr/colorControlNormal"
@@ -56,11 +56,24 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginTop="6dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="3dp"
         android:textColor="?android:attr/colorControlNormal"
         android:textStyle="italic|bold"
         android:fontFamily="@font/roboto"
         tools:text="Published At: 2024-01-07" />
+
+    <TextView
+        android:id="@+id/text_news_publisher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="?android:attr/colorControlNormal"
+        android:textStyle="italic|bold"
+        android:fontFamily="@font/roboto"
+        tools:text="Space News Monthly" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/news_view_article"

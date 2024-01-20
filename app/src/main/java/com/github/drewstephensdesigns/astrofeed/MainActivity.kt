@@ -2,22 +2,15 @@ package com.github.drewstephensdesigns.astrofeed
 
 import android.graphics.Typeface
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuInflater
-import android.view.MenuItem
-import android.view.View
-import android.window.OnBackInvokedDispatcher
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
-import androidx.core.view.MenuProvider
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.github.drewstephensdesigns.astrofeed.databinding.ActivityMainBinding
-import com.google.android.material.color.DynamicColors
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import es.dmoral.toasty.Toasty
 
 class MainActivity : AppCompatActivity() {
@@ -42,10 +35,9 @@ class MainActivity : AppCompatActivity() {
             setOf(
                 R.id.navigation_news,
                 R.id.navigation_capsules,
-                //R.id.navigation_launches,
+                R.id.navigation_launches,
                 R.id.navigation_rockets,
                 R.id.navigation_about,
-                R.id.stages
             )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)

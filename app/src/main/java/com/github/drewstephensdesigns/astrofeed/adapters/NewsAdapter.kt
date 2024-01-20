@@ -47,11 +47,13 @@ class NewsAdapter(
         var textNewsSummary: TextView = binding.textNewsSummary
         var textNewsPublished: TextView = binding.textNewsPublished
         var newsViewArticle: MaterialButton = binding.newsViewArticle
+        var newsPublisher: TextView = binding.textNewsPublisher
 
         fun bind(newsArticles: News){
             textNewsHeadline.text = newsArticles.title
             textNewsSummary.text = newsArticles.summary
             textNewsPublished.text = context.resources.getString(R.string.article_published_at, newsArticles.publishedAt)
+            newsPublisher.text = newsArticles.newsSite
 
             newsViewArticle.text = context.resources.getString(R.string.action_view_article)
             newsViewArticle.setTextColor(ContextCompat.getColor(context, R.color.blue_100))
@@ -59,10 +61,9 @@ class NewsAdapter(
             newsViewArticle.setOnClickListener {
                 val intent = Intent(Intent.ACTION_VIEW)
                 intent.data = (Uri.parse(newsArticles.url))
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 context.applicationContext.startActivity(intent)
             }
-
 
             articleImage.loadImage(newsArticles.image_url)
         }

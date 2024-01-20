@@ -5,33 +5,81 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@+id/navigation_news">
 
-    <fragment
-        android:id="@+id/stages"
-        android:name="com.github.drewstephensdesigns.astrofeed.ui.TabbedFragment"
-        android:label="@string/title_news"
-        tools:layout="@layout/tabbed_fragment" />
-
-
-    <!-- News -->
+    <!-- News / Reddit -->
     <fragment
         android:id="@+id/navigation_news"
-        android:name="com.github.drewstephensdesigns.astrofeed.ui.NewsFragment"
+        android:name="com.github.drewstephensdesigns.astrofeed.ui.TabbedNewsFragment"
         android:label="@string/title_news"
-        tools:layout="@layout/fragment_news" />
+        tools:layout="@layout/tabbed_news_fragment" />
 
-        <!-- Capsules -->
+
+    <!-- Capsules -->
     <fragment
         android:id="@+id/navigation_capsules"
         android:name="com.github.drewstephensdesigns.astrofeed.ui.CapsulesFragment"
         android:label="@string/title_capsules"
         tools:layout="@layout/fragment_capsules" />
 
-    <!-- Launches
+    <!-- Launches -->
     <fragment
         android:id="@+id/navigation_launches"
-        android:name="com.github.drewstephensdesigns.astrofeed.ui.LaunchesFragment"
+        android:name="com.github.drewstephensdesigns.astrofeed.ui.TabbedLaunchFragment"
         android:label="@string/title_launches"
-        tools:layout="@layout/fragment_launches" />-->
+        tools:layout="@layout/tabbed_launch_fragment">
+        <action
+            android:id="@+id/action_launch_detail_dest"
+            app:destination="@id/navigation_launch_details_dest" />
+    </fragment>
+
+
+    <!-- Upcoming Launch Details -->
+    <fragment
+        android:id="@+id/navigation_launch_details_dest"
+        android:name="com.github.drewstephensdesigns.astrofeed.ui.LaunchDetailsFragment"
+        android:label="@string/title_launch_details"
+        tools:layout="@layout/fragment_launch_details">
+
+        <argument
+            android:name="patch"
+            app:argType="string"
+            app:nullable="true" />
+
+        <argument
+            android:name="missionName"
+            app:argType="string"
+            app:nullable="true" />
+
+        <argument
+            android:name="missionDescription"
+            app:argType="string"
+            app:nullable="true" />
+
+        <argument
+            android:name="launchStatusName"
+            app:argType="string"
+            app:nullable="true" />
+
+        <argument
+            android:name="launchStatusDescription"
+            app:argType="string"
+            app:nullable="true" />
+
+        <argument
+            android:name="launchSiteName"
+            app:argType="string"
+            app:nullable="true" />
+
+        <argument
+            android:name="launchSiteMapImage"
+            app:argType="string"
+            app:nullable="true" />
+
+        <argument
+            android:name="launchSiteMapURL"
+            app:argType="string"
+            app:nullable="true" />
+
+    </fragment>
 
     <!-- Launch Vehicles -->
     <fragment

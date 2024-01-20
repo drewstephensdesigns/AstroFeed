@@ -10,6 +10,13 @@
     <string name="title_company">SpaceX</string>
     <string name="title_about">About</string>
 
+    <string name="title_mission">Mission</string>
+    <string name="title_mission_status">Launch Status</string>
+    <string name="title_launch_site">Launch Site</string>
+    <string name="title_launch_details">Launch Details</string>
+
+
+
     <!-- Action Strings -->
     <string name="action_sort">Sort</string>
     <string name="action_vehicle_specs">Vehicle Specs</string>
@@ -37,6 +44,7 @@
     <string name="detail_fragment_image_content_desc">Rocket Image from Flickr</string>
     <string name="fab_filter_cd">Filter Selection</string>
     <string name="description_placeholder">Falcon 9 is a two-stage rocket designed and manufactured by SpaceX for the reliable and safe transport of satellites</string>
+    <string name="tab_content_description">Tablayout</string>
 
     <!-- Placeholders -->
     <string name="stages_placeholder">Stages: %s</string>
@@ -48,6 +56,9 @@
     <string name="company_founder">Founded By %s</string>
     <string name="company_address">%1$s, %2$s, %3$s</string>
     <string name="article_published_at">Published: %s</string>
+    <string name="username_placeholder">u/%1$s</string>
+    <string name="subreddit_placeholder">r/%1$s</string>
+    <string name="date_placeholder">Posted: %1$s</string>
 
     <!-- Headers -->
     <string name="title_status_header">Active</string>

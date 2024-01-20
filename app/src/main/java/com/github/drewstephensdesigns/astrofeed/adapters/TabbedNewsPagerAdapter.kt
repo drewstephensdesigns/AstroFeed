@@ -6,7 +6,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.github.drewstephensdesigns.astrofeed.ui.NewsFragment
 import com.github.drewstephensdesigns.astrofeed.ui.RedditFragment
 
-class TabbedPagerAdapter(
+class TabbedNewsPagerAdapter(
     activity: FragmentActivity,
 ) : FragmentStateAdapter(activity) {
 

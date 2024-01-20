@@ -2,25 +2,21 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/stages"
-        android:icon="@drawable/ic_starlink"
-        android:title="@string/stages_header" />
-
-    <item
         android:id="@+id/navigation_news"
         android:icon="@drawable/ic_news_article"
         android:title="@string/title_news" />
+
 
     <item
         android:id="@+id/navigation_capsules"
         android:icon="@drawable/ic_capsule"
         android:title="@string/title_capsules" />
 
-    <!--
+
     <item
         android:id="@+id/navigation_launches"
         android:icon="@drawable/ic_launches"
-        android:title="@string/title_launches" /> -->
+        android:title="@string/title_launches" />
 
     <item
         android:id="@+id/navigation_rockets"

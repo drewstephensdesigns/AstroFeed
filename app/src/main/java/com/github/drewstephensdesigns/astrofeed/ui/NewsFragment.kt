@@ -9,17 +9,11 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback
-import com.github.drewstephensdesigns.astrofeed.R
 import com.github.drewstephensdesigns.astrofeed.adapters.NewsAdapter
-import com.github.drewstephensdesigns.astrofeed.adapters.TabbedPagerAdapter
-import com.github.drewstephensdesigns.astrofeed.data.local.model.News
 import com.github.drewstephensdesigns.astrofeed.databinding.FragmentNewsBinding
 import com.github.drewstephensdesigns.astrofeed.utils.Config
 import com.github.drewstephensdesigns.astrofeed.utils.LineDividerItemDecoration
 import com.github.drewstephensdesigns.astrofeed.viewmodels.NewsViewModel
-import com.google.android.material.tabs.TabLayout
-import com.google.android.material.tabs.TabLayoutMediator
 
 class NewsFragment : Fragment() {
 
@@ -31,8 +25,6 @@ class NewsFragment : Fragment() {
 
     private lateinit var newsAdapter: NewsAdapter
     private lateinit var newsViewModel: NewsViewModel
-
-
 
 
     override fun onCreateView(

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/patch_iv"
+        android:layout_width="@dimen/mission_patch_large"
+        android:layout_height="@dimen/mission_patch_large"
+        android:layout_marginTop="10dp"
+        app:strokeWidth="1dp"
+        android:layout_centerHorizontal="true"
+        app:strokeColor="?android:attr/colorControlNormal"
+        app:shapeAppearanceOverlay="@style/circleImageView"
+        android:contentDescription="@string/starlink_iv_cd">
+    </com.google.android.material.imageview.ShapeableImageView>
+
+    <TextView
+        android:id="@+id/text_launch_countdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/medium_margin"
+        android:layout_below="@id/patch_iv"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+        android:fontFamily="@font/noto_sans"
+        android:textStyle="bold"
+        android:textColor="?android:attr/colorControlNormal"
+        tools:text="T-11:21:22:04" />
+
+    <TextView
+        android:id="@+id/text_launch_mission"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_launch_countdown"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginEnd="@dimen/medium_margin"
+        android:fontFamily="@font/noto_sans"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+        android:textColor="?android:attr/colorControlNormal"
+        tools:text="CYGNUS CRS-20 NG-20" />
+
+    <TextView
+        android:id="@+id/text_launch_mission_details_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:layout_below="@id/text_launch_mission"
+        android:textAppearance="@style/TextAppearance.Material3.LabelLarge"
+        android:fontFamily="@font/noto_sans"
+        android:textStyle="bold"
+        android:textColor="?android:attr/colorControlNormal"
+        android:text="@string/title_mission" />
+
+    <TextView
+        android:id="@+id/text_launch_mission_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:layout_marginEnd="@dimen/medium_margin"
+        android:layout_below="@id/text_launch_mission_details_header"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="@style/TextAppearance.Material3.LabelMedium"
+        android:fontFamily="@font/noto_sans"
+        android:textColor="?android:attr/colorControlNormal"
+        tools:text="This is the 20th flight of Orbital ATK's uncrewed resupply mission" />
+
+    <TextView
+        android:id="@+id/text_launch_mission_status_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:layout_below="@id/text_launch_mission_details"
+        android:textAppearance="@style/TextAppearance.Material3.LabelLarge"
+        android:fontFamily="@font/noto_sans"
+        android:textStyle="bold"
+        android:textColor="?android:attr/colorControlNormal"
+        android:text="@string/title_mission_status"/>
+
+    <TextView
+        android:id="@+id/text_launch_mission_status_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:layout_below="@id/text_launch_mission_status_header"
+        android:textAppearance="@style/TextAppearance.Material3.LabelMedium"
+        android:fontFamily="@font/noto_sans"
+        android:textStyle="italic"
+        android:textColor="?android:attr/colorControlNormal"
+        tools:text="Go For Launch"/>
+
+    <TextView
+        android:id="@+id/text_launch_mission_status_descrip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:layout_below="@id/text_launch_mission_status_name"
+        android:textAppearance="@style/TextAppearance.Material3.LabelMedium"
+        android:fontFamily="@font/noto_sans"
+        android:textColor="?android:attr/colorControlNormal"
+        tools:text="Current T-0 confirmed by official or reliable sources"/>
+
+    <TextView
+        android:id="@+id/text_launch_mission_launch_site_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:layout_below="@id/text_launch_mission_status_descrip"
+        android:textAppearance="@style/TextAppearance.Material3.LabelLarge"
+        android:fontFamily="@font/noto_sans"
+        android:textColor="?android:attr/colorControlNormal"
+        android:textStyle="bold"
+        android:text="@string/title_launch_site"/>
+
+    <TextView
+        android:id="@+id/text_launch_mission_launch_site"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:layout_below="@id/text_launch_mission_launch_site_header"
+        android:textAppearance="@style/TextAppearance.Material3.LabelMedium"
+        android:fontFamily="@font/noto_sans"
+        android:textColor="?android:attr/colorControlNormal"
+        android:textStyle="bold"
+        tools:text="Space Launch Complex 4E"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/map_iv"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="@dimen/medium_margin"
+        app:strokeWidth="1dp"
+        android:layout_below="@id/text_launch_mission_launch_site"
+        android:layout_centerHorizontal="true"
+        app:strokeColor="?android:attr/colorControlNormal"
+        app:shapeAppearanceOverlay="@style/newsCircleImageView"
+        android:contentDescription="@string/starlink_iv_cd">
+    </com.google.android.material.imageview.ShapeableImageView>
+
+</RelativeLayout>
+</ScrollView>

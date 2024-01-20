@@ -13,7 +13,10 @@
         app:tabTextColor="?colorControlNormal"
         app:tabInlineLabel="true"
         app:tabIconTint="@null"
-        app:tabIndicatorColor="?colorControlNormal"
+        app:tabIndicatorColor="@color/blue_200"
+        app:tabIndicatorAnimationMode="elastic"
+        app:tabIndicatorAnimationDuration="@integer/material_motion_duration_medium_2"
+        android:contentDescription="@string/tab_content_description"
         android:background="?attr/colorOnPrimary"/>
 
     <androidx.viewpager2.widget.ViewPager2

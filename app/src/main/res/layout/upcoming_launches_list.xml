@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/mission_patch_iv"
+        android:layout_width="@dimen/mission_patch_small"
+        android:layout_height="@dimen/mission_patch_small"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        app:strokeWidth="1dp"
+        android:src="@drawable/ic_galaxy"
+        app:strokeColor="?android:attr/colorControlNormal"
+        app:shapeAppearanceOverlay="@style/circleImageView"
+        android:contentDescription="@string/starlink_iv_cd">
+    </com.google.android.material.imageview.ShapeableImageView>
+
+    <TextView
+        android:id="@+id/text_mission_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/mission_patch_iv"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/noto_sans"
+        android:textAppearance="@style/TextAppearance.Material3.TitleSmall"
+        tools:text="Falcon 9 Block 5 | Starlink Group 7-10" />
+
+    <TextView
+        android:id="@+id/text_launch_window_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_mission_name"
+        android:layout_toEndOf="@id/mission_patch_iv"
+        android:layout_marginStart="16dp"
+        android:textAppearance="@style/TextAppearance.Material3.LabelMedium"
+        android:fontFamily="@font/roboto"
+        tools:text="2024-01-14T08:59:30Z" />
+
+    <TextView
+        android:id="@+id/text_launch_pad_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_launch_window_start"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/xsmall_margin"
+        android:layout_toEndOf="@id/mission_patch_iv"
+        android:ellipsize="end"
+        android:textStyle="italic"
+        android:textAppearance="@style/TextAppearance.Material3.LabelMedium"
+        tools:text="Space Launch Complex 4E" />
+
+
+    <TextView
+        android:id="@+id/text_launch_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_launch_pad_location"
+        android:layout_toEndOf="@id/mission_patch_iv"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/xsmall_margin"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.Material3.LabelSmall"
+        android:fontFamily="@font/roboto"
+        tools:text="SUCCESS" />
+
+</RelativeLayout>

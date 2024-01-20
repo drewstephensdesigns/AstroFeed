@@ -14,6 +14,7 @@ import com.github.drewstephensdesigns.astrofeed.databinding.FragmentCapsulesBind
 import com.github.drewstephensdesigns.astrofeed.utils.Config
 import com.github.drewstephensdesigns.astrofeed.utils.LineDividerItemDecoration
 import com.github.drewstephensdesigns.astrofeed.viewmodels.CapsuleViewModel
+import com.google.android.material.transition.MaterialSharedAxis
 import com.maxkeppeler.sheets.input.InputSheet
 import com.maxkeppeler.sheets.input.type.InputRadioButtons
 
@@ -24,6 +25,12 @@ class CapsulesFragment : Fragment() {
 
     private lateinit var capsulesAdapter: CapsulesAdapter
     private lateinit var capsuleViewModel: CapsuleViewModel
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enterTransition = MaterialSharedAxis(MaterialSharedAxis.X, true)
+        exitTransition = MaterialSharedAxis(MaterialSharedAxis.X, true)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,

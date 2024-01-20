@@ -17,6 +17,7 @@ import com.github.drewstephensdesigns.astrofeed.databinding.FragmentRocketsBindi
 import com.github.drewstephensdesigns.astrofeed.utils.Config
 import com.github.drewstephensdesigns.astrofeed.utils.LineDividerItemDecoration
 import com.github.drewstephensdesigns.astrofeed.viewmodels.RocketViewModel
+import com.google.android.material.transition.MaterialSharedAxis
 import kotlin.random.Random
 
 class RocketsFragment : Fragment(), RocketAdapter.RocketClickListener {
@@ -27,6 +28,12 @@ class RocketsFragment : Fragment(), RocketAdapter.RocketClickListener {
     private lateinit var navController: NavController
     private lateinit var rocketAdapter: RocketAdapter
     private lateinit var rocketViewModel: RocketViewModel
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enterTransition = MaterialSharedAxis(MaterialSharedAxis.X, true)
+        exitTransition = MaterialSharedAxis(MaterialSharedAxis.X, true)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,

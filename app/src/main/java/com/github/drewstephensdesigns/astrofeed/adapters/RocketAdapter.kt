@@ -8,16 +8,12 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
-import com.github.drewstephensdesigns.astrofeed.MainActivity
 import com.github.drewstephensdesigns.astrofeed.R
 import com.github.drewstephensdesigns.astrofeed.data.local.model.Rocket
 import com.github.drewstephensdesigns.astrofeed.databinding.RocketListItemBinding
 import com.github.drewstephensdesigns.astrofeed.utils.Config.loadImage
 import com.google.android.material.button.MaterialButton
-import com.squareup.picasso.Picasso
-import kotlin.random.Random
 
 
 class RocketAdapter(
@@ -53,15 +49,6 @@ class RocketAdapter(
         var textRocketDescription : TextView = binding.textRocketDescription
         var vehicleSpecsButton: MaterialButton = binding.vehicleSpecs
 
-        /*
-        init {
-            binding.root.setOnClickListener {
-                onClickListener.onRocketItemClick(rocketObjects[bindingAdapterPosition])
-            }
-        }
-
-         */
-
         fun bind(rockets: Rocket){
             textRocketName.text = rockets.name
             textRocketDescription.text = rockets.description
@@ -70,7 +57,7 @@ class RocketAdapter(
             textRocketDescription.setOnClickListener {
                 val intent = Intent(Intent.ACTION_VIEW)
                 intent.data = (Uri.parse(rockets.wikipedia))
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 ct.applicationContext.startActivity(intent)
 
             }
@@ -83,9 +70,6 @@ class RocketAdapter(
 
             // Shuffle the list of image URLs
             val randomImageUrl = rockets.flickrImages.random()
-
-            //println("Rocket Name:" + rockets.name + "RocketImage" + randomImageUrl)
-
             rocketImage.loadImage(randomImageUrl)
 
         }

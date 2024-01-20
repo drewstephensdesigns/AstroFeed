@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Theme.AstroFeed" parent="Theme.Material3.DayNight">
         <!-- Primary brand color. -->
@@ -36,8 +36,14 @@
 
     <style name="circleImageView" parent="">
         <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="newsCircleImageView" parent="">
+        <item name="cornerFamily">rounded</item>
         <item name="cornerSize">20%</item>
     </style>
+
 
     <!-- style="@style/AppTextButton.Icon" -->
 

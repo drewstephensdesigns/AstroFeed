@@ -23,4 +23,7 @@ data class News(
 
     @SerializedName("updated_at")
     var updatedAt: String? = null,
+
+    @SerializedName("news_site")
+    var newsSite: String? = null
 )

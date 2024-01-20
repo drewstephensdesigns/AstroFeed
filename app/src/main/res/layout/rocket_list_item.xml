@@ -19,7 +19,7 @@
         app:strokeWidth="1dp"
         android:layout_gravity="center_horizontal"
         app:strokeColor="?android:attr/colorControlNormal"
-        app:shapeAppearanceOverlay="@style/circleImageView"
+        app:shapeAppearanceOverlay="@style/newsCircleImageView"
         android:contentDescription="@string/starlink_iv_cd">
     </com.google.android.material.imageview.ShapeableImageView>
 
