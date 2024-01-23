@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+
     <shortcut
         android:shortcutId="news"
         android:enabled="true"
@@ -8,7 +9,20 @@
         android:shortcutLongLabel="@string/title_news">
         <intent
             android:action="android.intent.action.VIEW"
-            android:data="spacex://news"
+            android:data="astrofeed://news"
+            android:targetClass="com.github.drewstephensdesigns.astrofeed.MainActivity"
+            android:targetPackage="com.github.drewstephensdesigns.astrofeed" />
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="launches"
+        android:enabled="true"
+        android:icon="@drawable/ic_rockets"
+        android:shortcutShortLabel="@string/title_launches"
+        android:shortcutLongLabel="@string/title_launches">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="astrofeed://launches"
             android:targetClass="com.github.drewstephensdesigns.astrofeed.MainActivity"
             android:targetPackage="com.github.drewstephensdesigns.astrofeed" />
     </shortcut>

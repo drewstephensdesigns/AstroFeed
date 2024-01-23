@@ -86,7 +86,7 @@ class LaunchDetailsFragment : Fragment() {
 
             override fun onFinish() {
                 // Handle countdown finish if needed
-                binding.textLaunchCountdown.text = context?.resources?.getString(R.string.title_launch_go)
+                //binding.textLaunchCountdown.text = context?.resources?.getString(R.string.title_launch_go)
             }
         }.start()
     }
@@ -109,12 +109,16 @@ class LaunchDetailsFragment : Fragment() {
             textLaunchMission.text = launchArgs.missionName
             textLaunchMissionDetails.text = launchArgs.missionDescription
 
+            textLaunchMissionType.text = context?.resources?.getString(R.string.mission_type, launchArgs.missionType)
+            textLaunchMissionOrbit.text = context?.resources?.getString(R.string.orbit_type, launchArgs.missionOrbit)
+
            // Launch Status/Description
             textLaunchMissionStatusName.text = launchArgs.launchStatusName
             textLaunchMissionStatusDescrip.text = launchArgs.launchStatusDescription
 
             // Launch Site
             textLaunchMissionLaunchSite.text = launchArgs.launchSiteName
+            textLaunchMissionLaunchLocation.text = launchArgs.launchPadLocation
 
             // Map image (clicking open up Google Maps location)
             mapIv.loadImage(launchArgs.launchSiteMapImage)

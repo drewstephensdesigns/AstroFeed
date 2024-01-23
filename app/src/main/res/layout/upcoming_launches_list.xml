@@ -59,12 +59,24 @@
         android:textAppearance="@style/TextAppearance.Material3.LabelMedium"
         tools:text="Space Launch Complex 4E" />
 
+    <TextView
+        android:id="@+id/text_launch_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_launch_pad_location"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/xsmall_margin"
+        android:layout_toEndOf="@id/mission_patch_iv"
+        android:ellipsize="end"
+        android:textStyle="italic"
+        android:textAppearance="@style/TextAppearance.Material3.LabelMedium"
+        tools:text="Space Launch Complex 4E" />
 
     <TextView
         android:id="@+id/text_launch_status"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/text_launch_pad_location"
+        android:layout_below="@id/text_launch_location"
         android:layout_toEndOf="@id/mission_patch_iv"
         android:layout_marginStart="16dp"
         android:layout_marginTop="@dimen/xsmall_margin"

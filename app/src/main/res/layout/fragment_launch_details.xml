@@ -76,13 +76,23 @@
         android:textColor="?android:attr/colorControlNormal"
         tools:text="This is the 20th flight of Orbital ATK's uncrewed resupply mission" />
 
+    <View
+        android:id="@+id/line_break1"
+        android:layout_width="150dp"
+        android:layout_height="5dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/medium_margin"
+        android:backgroundTint="@color/blue_200"
+        android:layout_below="@id/text_launch_mission_details"
+        android:background="@drawable/dashed_line"/>
+
     <TextView
         android:id="@+id/text_launch_mission_status_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginTop="@dimen/medium_margin"
         android:layout_marginStart="@dimen/medium_margin"
-        android:layout_below="@id/text_launch_mission_details"
+        android:layout_below="@id/line_break1"
         android:textAppearance="@style/TextAppearance.Material3.LabelLarge"
         android:fontFamily="@font/noto_sans"
         android:textStyle="bold"
@@ -114,13 +124,60 @@
         android:textColor="?android:attr/colorControlNormal"
         tools:text="Current T-0 confirmed by official or reliable sources"/>
 
+    <View
+        android:id="@+id/line_break2"
+        android:layout_width="150dp"
+        android:layout_height="5dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/medium_margin"
+        android:backgroundTint="@color/blue_200"
+        android:layout_below="@id/text_launch_mission_status_descrip"
+        android:background="@drawable/dashed_line"/>
+
     <TextView
-        android:id="@+id/text_launch_mission_launch_site_header"
+        android:id="@+id/text_launch_mission_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/medium_margin"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:layout_below="@id/line_break2"
+        android:textAppearance="@style/TextAppearance.Material3.LabelMedium"
+        android:fontFamily="@font/noto_sans"
+        android:textStyle="bold"
+        android:textColor="?android:attr/colorControlNormal"
+        tools:text="Type: Resupply Mission"/>
+
+
+    <TextView
+        android:id="@+id/text_launch_mission_orbit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/small_margin"
         android:layout_marginStart="@dimen/medium_margin"
-        android:layout_below="@id/text_launch_mission_status_descrip"
+        android:layout_below="@id/text_launch_mission_type"
+        android:textAppearance="@style/TextAppearance.Material3.LabelMedium"
+        android:fontFamily="@font/noto_sans"
+        android:textStyle="bold"
+        android:textColor="?android:attr/colorControlNormal"
+        tools:text="Orbit: Low Earth Orbit"/>
+
+    <View
+        android:id="@+id/line_break3"
+        android:layout_width="150dp"
+        android:layout_height="5dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/medium_margin"
+        android:backgroundTint="@color/blue_200"
+        android:layout_below="@id/text_launch_mission_orbit"
+        android:background="@drawable/dashed_line"/>
+
+    <TextView
+        android:id="@+id/text_launch_mission_launch_site_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/medium_margin"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:layout_below="@id/line_break3"
         android:textAppearance="@style/TextAppearance.Material3.LabelLarge"
         android:fontFamily="@font/noto_sans"
         android:textColor="?android:attr/colorControlNormal"
@@ -140,13 +197,26 @@
         android:textStyle="bold"
         tools:text="Space Launch Complex 4E"/>
 
+    <TextView
+        android:id="@+id/text_launch_mission_launch_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:layout_below="@id/text_launch_mission_launch_site"
+        android:textAppearance="@style/TextAppearance.Material3.LabelMedium"
+        android:fontFamily="@font/noto_sans"
+        android:textColor="?android:attr/colorControlNormal"
+        android:textStyle="bold"
+        tools:text="Space Launch Complex 4E"/>
+
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/map_iv"
         android:layout_width="350dp"
         android:layout_height="200dp"
         android:layout_marginTop="@dimen/medium_margin"
         app:strokeWidth="1dp"
-        android:layout_below="@id/text_launch_mission_launch_site"
+        android:layout_below="@id/text_launch_mission_launch_location"
         android:layout_centerHorizontal="true"
         app:strokeColor="?android:attr/colorControlNormal"
         app:shapeAppearanceOverlay="@style/newsCircleImageView"

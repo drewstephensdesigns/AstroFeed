@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rel_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/app_iv"
+            android:layout_width="@dimen/mission_patch_size"
+            android:layout_height="@dimen/mission_patch_size"
+            android:layout_marginTop="@dimen/large_margin"
+            app:strokeWidth="1dp"
+            android:layout_centerHorizontal="true"
+            app:strokeColor="?android:attr/colorControlNormal"
+            app:shapeAppearanceOverlay="@style/circleImageView"
+            tools:src="@tools:sample/avatars"/>
+
+        <TextView
+            android:id="@+id/text_app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:layout_below="@id/app_iv"
+            android:layout_centerHorizontal="true"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:fontFamily="@font/noto_sans"
+            android:textStyle="bold"
+            android:textColor="?android:attr/colorControlNormal"
+            tools:text="AstroFeed" />
+
+        <TextView
+            android:id="@+id/text_app_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/xsmall_margin"
+            android:layout_marginStart="@dimen/medium_margin"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/text_app_name"
+            android:textAppearance="@style/TextAppearance.Material3.LabelLarge"
+            android:fontFamily="@font/noto_sans"
+            android:textStyle="bold"
+            android:textColor="?android:attr/colorControlNormal"
+            tools:text="1.0.0" />
+
+        <TextView
+            android:id="@+id/text_app_powered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/xsmall_margin"
+            android:layout_marginBottom="@dimen/medium_margin"
+            android:layout_marginStart="@dimen/medium_margin"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/text_app_version"
+            android:textAppearance="@style/TextAppearance.Material3.LabelLarge"
+            android:fontFamily="@font/roboto"
+            android:textStyle="bold"
+            android:textColor="?android:attr/colorControlNormal"
+            tools:text="Powered by Launch Library 2" />
+
+        <!-- App Rating -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/rate"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_below="@id/text_app_powered"
+            style="@style/AboutCard">
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/AboutItem"
+                android:text="@string/action_rate_app"
+                app:drawableStartCompat="@drawable/ic_thumbs_up" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Email Feedback -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/feedback"
+            android:layout_below="@id/rate"
+            android:layout_marginTop="@dimen/small_margin"
+            style="@style/AboutCard">
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/AboutItem"
+                android:text="@string/action_give_feedback"
+                app:drawableStartCompat="@drawable/ic_email" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Linkedin Link -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/linkedin"
+            android:layout_below="@id/feedback"
+            style="@style/AboutCard">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/AboutItem"
+                android:text="@string/linkedin"
+                app:drawableStartCompat="@drawable/ic_people" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Github Link -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/github"
+            android:layout_below="@id/linkedin"
+            style="@style/AboutCard">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/AboutItem"
+                android:text="@string/github"
+                app:drawableStartCompat="@drawable/ic_code" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Instagram Link -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/instagram"
+            android:layout_below="@id/github"
+            style="@style/AboutCard">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/AboutItem"
+                android:text="@string/instagram"
+                app:drawableStartCompat="@drawable/ic_camera" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Device Info -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/device"
+            android:layout_below="@id/instagram"
+            style="@style/AboutCard">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/AboutItem"
+                android:text="@string/device_info"
+                app:drawableStartCompat="@drawable/ic_phone" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- OSS Licenses -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/licenses"
+            android:layout_below="@id/device"
+            android:layout_marginTop="@dimen/small_margin"
+            style="@style/AboutCard">
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/AboutItem"
+                android:text="@string/action_open_source"
+                app:drawableStartCompat="@drawable/ic_dev_mode" />
+        </com.google.android.material.card.MaterialCardView>
+    </RelativeLayout>
+</ScrollView>

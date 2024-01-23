@@ -10,15 +10,13 @@
         android:id="@+id/navigation_news"
         android:name="com.github.drewstephensdesigns.astrofeed.ui.TabbedNewsFragment"
         android:label="@string/title_news"
-        tools:layout="@layout/tabbed_news_fragment" />
+        tools:layout="@layout/tabbed_news_fragment">
 
+    <deepLink
+        android:id="@+id/deepLink"
+        app:uri="astrofeed://news" />
 
-    <!-- Capsules -->
-    <fragment
-        android:id="@+id/navigation_capsules"
-        android:name="com.github.drewstephensdesigns.astrofeed.ui.CapsulesFragment"
-        android:label="@string/title_capsules"
-        tools:layout="@layout/fragment_capsules" />
+</fragment>
 
     <!-- Launches -->
     <fragment
@@ -29,8 +27,11 @@
         <action
             android:id="@+id/action_launch_detail_dest"
             app:destination="@id/navigation_launch_details_dest" />
-    </fragment>
 
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="astrofeed://launches" />
+    </fragment>
 
     <!-- Upcoming Launch Details -->
     <fragment
@@ -81,6 +82,21 @@
 
         <argument
             android:name="launchTime"
+            app:argType="string"
+            app:nullable="true" />
+
+        <argument
+            android:name="missionType"
+            app:argType="string"
+            app:nullable="true" />
+
+        <argument
+            android:name="missionOrbit"
+            app:argType="string"
+            app:nullable="true" />
+
+        <argument
+            android:name="launchPadLocation"
             app:argType="string"
             app:nullable="true" />
 
@@ -190,5 +206,11 @@
         android:name="com.github.drewstephensdesigns.astrofeed.ui.CompanyFragment"
         android:label="@string/title_company"
         tools:layout="@layout/fragment_company" />
+
+    <fragment
+        android:id="@+id/navigation_about_dev"
+        android:name="com.github.drewstephensdesigns.astrofeed.ui.AboutDevFragment"
+        android:label="@string/title_about"
+        tools:layout="@layout/fragment_about_dev" />
 
 </navigation>

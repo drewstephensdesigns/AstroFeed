@@ -3,9 +3,9 @@
     <!-- App Screens-->
     <string name="app_name">AstroFeed</string>
     <string name="title_news">News</string>
+    <string name="title_spacecraft">Spacecraft</string>
     <string name="title_launches">Launches</string>
     <string name="title_rockets">Rockets</string>
-    <string name="title_payloads">Payloads</string>
     <string name="title_settings">Settings</string>
     <string name="title_company">SpaceX</string>
     <string name="title_about">About</string>
@@ -16,7 +16,19 @@
     <string name="title_launch_details">Launch Details</string>
     <string name="title_launch_go">Launch is a Go!</string>
 
+    <!-- About Dev Page -->
+    <string name="action_rate_app">Give us a rating</string>
+    <string name="action_give_feedback">Let us know how we can improve</string>
+    <string name="action_open_source">Libraries we use</string>
+    <string name="action_device_info">Device Info</string>
 
+    <!-- Social Media Links -->
+    <string name="instagram">Follow me on Instagram</string>
+    <string name="github">Follow me on Github</string>
+    <string name="linkedin">Connect with me on LinkedIn</string>
+    <string name="developer_instagram_url" translatable="false">https://www.instagram.com/drewstephensdesigns/</string>
+    <string name="developer_github_url" translatable="false">https://github.com/drewstephensdesigns</string>
+    <string name="developer_linkedin_url" translatable="false">https://www.linkedin.com/in/drewstephens/</string>
 
     <!-- Action Strings -->
     <string name="action_sort">Sort</string>
@@ -60,6 +72,9 @@
     <string name="username_placeholder">u/%1$s</string>
     <string name="subreddit_placeholder">r/%1$s</string>
     <string name="date_placeholder">Posted: %1$s</string>
+    <string name="mission_type">Mission Type: %1$s</string>
+    <string name="orbit_type">Orbit: %1$s</string>
+    <string name="launch_time_local">%1$s (Local Time)</string>
 
     <!-- Headers -->
     <string name="title_status_header">Active</string>
@@ -69,7 +84,7 @@
     <string name="rocket_type_header">Type</string>
     <string name="boosters">Boosters</string>
     <string name="first_flight">First Flight</string>
-    <string name="title_capsules">Capsules</string>
+
     <string name="thrust_header">Thrust at Liftoff</string>
     <string name="cost_header">Cost Per Launch</string>
     <string name="propellant1">Propellant 1</string>
@@ -90,5 +105,20 @@
     <string name="title_headquarters">Location</string>
     <string name="show_headquarters_location_in_google_maps">Google Maps location of headquarters</string>
 
+    <!-- Attribution / About -->
+    <string name="flat_icon_attr">Boost icons created by Freepik - Flaticon</string>
+    <string name="flat_icon_attr_url" translatable="false">https://www.flaticon.com/free-icons/boost</string>
+    <string name="version_header">Build Version </string>
+    <string name="version_text">%1$s %2$s</string>
+
+    <string name="open_copied">Open</string>
+    <string name="copied">Copied</string>
+    <string name="copied_to_clipboard">Copied to clipboard</string>
+    <string name="device_info">Device info</string>
+
+    <string name="powered_by">Powered by The Launch Library 2</string>
+
+    <!-- Shared Preference Keys-->
+    <string name="pref_key_mode_night">PREF_MODE_NIGHT</string>
 
 </resources>

@@ -1,7 +1,10 @@
 package com.github.drewstephensdesigns.astrofeed.utils
 
+import android.content.ClipData
+import android.content.ClipboardManager
 import android.content.Context
 import android.widget.ImageView
+import androidx.core.content.getSystemService
 import com.github.drewstephensdesigns.astrofeed.R
 import com.squareup.picasso.Picasso
 import es.dmoral.toasty.Toasty
@@ -11,10 +14,6 @@ import java.util.Date
 import java.util.Locale
 
 object Config {
-
-    // API SOURCES
-    // https://docs.spacexdata.com
-    // https://github.com/r-spacex/SpaceX-API/tree/master/docs
 
     // Legacy API
     const val BASE_URL = "https://api.spacexdata.com/"
@@ -46,7 +45,6 @@ object Config {
 
     // launches
     const val SPACEX_UPCOMING_LAUNCHES = "launch/upcoming"
-
 
 
     const val LAUNCH_LINKS = "links"
@@ -98,10 +96,8 @@ object Config {
             .into(this)
     }
 
-    fun getLocalTimeFromUnix(unixTime: Long): String {
-        val simpleDateFormat = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
-        simpleDateFormat.timeZone = Calendar.getInstance().timeZone
-        return simpleDateFormat.format(Date(unixTime * 1000))
+    fun save(context: Context, text: String) {
+        val clip = ClipData.newPlainText(context.getString(R.string.copied), text)
+        context.getSystemService<ClipboardManager>()!!.setPrimaryClip(clip)
     }
-
 }

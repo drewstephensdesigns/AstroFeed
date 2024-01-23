@@ -15,6 +15,9 @@ import com.github.drewstephensdesigns.astrofeed.utils.formatDate
 import com.github.drewstephensdesigns.astrofeed.utils.toMillis
 import com.google.android.material.imageview.ShapeableImageView
 import com.squareup.picasso.Picasso
+import java.text.SimpleDateFormat
+import java.util.Locale
+import java.util.TimeZone
 
 
 class UpcomingLaunchesAdapter(
@@ -49,28 +52,39 @@ class UpcomingLaunchesAdapter(
         private var textMissionName : TextView = binding.textMissionName
         private var textMissionWindow : TextView = binding.textLaunchWindowStart
         private var textMissionLaunchPad : TextView = binding.textLaunchPadLocation
+        private var textMissionLaunchLocation : TextView = binding.textLaunchLocation
         private var textMissionLaunchStatus : TextView = binding.textLaunchStatus
+
 
         fun bind(launches: LaunchResponse){
             textMissionName.text = launches.mission!!.name
             textMissionName.setTextColor(ContextCompat.getColor(context, R.color.blue_100))
 
-            textMissionWindow.text = launches.net
+            // Assuming launches.net is a String in the format "2024-01-23T04:03:00Z"
+            val dateFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.getDefault())
+            dateFormat.timeZone = TimeZone.getTimeZone("GMT")
 
-            launches.net?.formatDate()
-            launches.net?.toMillis()
+            val launchTime = dateFormat.parse(launches.net!!)
 
+            // Convert to local time zone
+            val localDateFormat = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault())
+            localDateFormat.timeZone = TimeZone.getDefault()
+
+            val localLaunchTime = localDateFormat.format(launchTime!!)
+
+            // Set the text view
+            textMissionWindow.text = context.resources.getString(R.string.launch_time_local, localLaunchTime)
+
+                    //localLaunchTime
 
             textMissionLaunchPad.text = launches.pad!!.name
+            textMissionLaunchLocation.text = launches.pad.location.name
             textMissionLaunchStatus.text = launches.status!!.name
-
 
             // Check if MissionPatches list is not empty for the current LaunchResult
             //if (launches.program!!.isNotEmpty() && launches.program[0].missionPatches?.isNotEmpty()!!) {
               if (launches.missionPatches!!.isNotEmpty()){
-
-
-
+                  
 
                 // Load the first mission patch image for the current LaunchResult
                // val missionPatchUrl = launches.program[0].missionPatches!![0].imageUrl

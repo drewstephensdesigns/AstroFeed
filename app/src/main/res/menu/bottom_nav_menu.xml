@@ -6,13 +6,6 @@
         android:icon="@drawable/ic_news_article"
         android:title="@string/title_news" />
 
-
-    <item
-        android:id="@+id/navigation_capsules"
-        android:icon="@drawable/ic_capsule"
-        android:title="@string/title_capsules" />
-
-
     <item
         android:id="@+id/navigation_launches"
         android:icon="@drawable/ic_launches"
