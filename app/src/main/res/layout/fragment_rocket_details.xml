@@ -5,10 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    tools:context=".ui.RocketDetailsFragment">
+    tools:context=".ui.rockets.RocketDetailsFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/shared_container_end_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -77,7 +76,6 @@
 
         <!-- Status Header -->
         <TextView
-            android:id="@+id/text_capsule_status_header"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/title_status_header"

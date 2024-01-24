@@ -3,7 +3,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/list_item_reddit_constraint"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -24,6 +23,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/list_item_reddit_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="@dimen/medium_margin"
@@ -146,14 +146,13 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/list_item_reddit_content"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/list_item_reddit_header">
 
-                <com.github.drewstephensdesigns.astrofeed.utils.HTMLView
+                <com.github.drewstephensdesigns.astrofeed.ui.HTMLView
                     android:id="@+id/list_item_reddit_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -180,7 +179,6 @@
                     tools:src="@tools:sample/avatars" />
 
                 <LinearLayout
-                    android:id="@+id/list_item_info"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/small_margin"
@@ -191,6 +189,7 @@
                     app:layout_constraintTop_toBottomOf="@id/list_item_reddit_preview">
 
                     <ImageView
+                        android:id="@+id/updoot_iv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/ic_arrow_up"
@@ -204,6 +203,7 @@
                         tools:text="231" />
 
                     <ImageView
+                        android:id="@+id/comment_iv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/medium_margin"

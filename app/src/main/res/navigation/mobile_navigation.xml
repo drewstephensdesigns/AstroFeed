@@ -2,41 +2,36 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/mobile_navigation"
     app:startDestination="@+id/navigation_news">
 
     <!-- News / Reddit -->
     <fragment
         android:id="@+id/navigation_news"
-        android:name="com.github.drewstephensdesigns.astrofeed.ui.TabbedNewsFragment"
+        android:name="com.github.drewstephensdesigns.astrofeed.ui.news.TabbedNewsFragment"
         android:label="@string/title_news"
         tools:layout="@layout/tabbed_news_fragment">
 
-    <deepLink
-        android:id="@+id/deepLink"
-        app:uri="astrofeed://news" />
+    <deepLink app:uri="astrofeed://news" />
 
 </fragment>
 
     <!-- Launches -->
     <fragment
         android:id="@+id/navigation_launches"
-        android:name="com.github.drewstephensdesigns.astrofeed.ui.TabbedLaunchFragment"
+        android:name="com.github.drewstephensdesigns.astrofeed.ui.launches.TabbedLaunchFragment"
         android:label="@string/title_launches"
         tools:layout="@layout/tabbed_launch_fragment">
         <action
             android:id="@+id/action_launch_detail_dest"
             app:destination="@id/navigation_launch_details_dest" />
 
-        <deepLink
-            android:id="@+id/deepLink"
-            app:uri="astrofeed://launches" />
+        <deepLink app:uri="astrofeed://launches" />
     </fragment>
 
     <!-- Upcoming Launch Details -->
     <fragment
         android:id="@+id/navigation_launch_details_dest"
-        android:name="com.github.drewstephensdesigns.astrofeed.ui.LaunchDetailsFragment"
+        android:name="com.github.drewstephensdesigns.astrofeed.ui.launches.LaunchDetailsFragment"
         android:label="@string/title_launch_details"
         tools:layout="@layout/fragment_launch_details">
 
@@ -105,7 +100,7 @@
     <!-- Launch Vehicles -->
     <fragment
         android:id="@+id/navigation_rockets"
-        android:name="com.github.drewstephensdesigns.astrofeed.ui.RocketsFragment"
+        android:name="com.github.drewstephensdesigns.astrofeed.ui.rockets.RocketsFragment"
         android:label="@string/title_rockets"
         tools:layout="@layout/fragment_rockets" >
         <action
@@ -116,7 +111,7 @@
     <!-- Launch Vehicles Details -->
     <fragment
         android:id="@+id/navigation_rocket_details_dest"
-        android:name="com.github.drewstephensdesigns.astrofeed.ui.RocketDetailsFragment"
+        android:name="com.github.drewstephensdesigns.astrofeed.ui.rockets.RocketDetailsFragment"
         tools:layout="@layout/fragment_rocket_details">
 
         <!-- This is a bug with Android Studio -->
@@ -196,20 +191,20 @@
     <!-- About Main Fragment -->
     <fragment
         android:id="@+id/navigation_about"
-        android:name="com.github.drewstephensdesigns.astrofeed.ui.AboutFragment"
+        android:name="com.github.drewstephensdesigns.astrofeed.ui.about.AboutFragment"
         android:label="@string/title_about"
         tools:layout="@layout/fragment_about" />
 
     <!-- Company Fragment -->
     <fragment
         android:id="@+id/navigation_company"
-        android:name="com.github.drewstephensdesigns.astrofeed.ui.CompanyFragment"
+        android:name="com.github.drewstephensdesigns.astrofeed.ui.about.CompanyFragment"
         android:label="@string/title_company"
         tools:layout="@layout/fragment_company" />
 
     <fragment
         android:id="@+id/navigation_about_dev"
-        android:name="com.github.drewstephensdesigns.astrofeed.ui.AboutDevFragment"
+        android:name="com.github.drewstephensdesigns.astrofeed.ui.about.AboutDevFragment"
         android:label="@string/title_about"
         tools:layout="@layout/fragment_about_dev" />
 

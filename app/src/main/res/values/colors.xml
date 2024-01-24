@@ -6,9 +6,5 @@
     <color name="blue_100">#9ccddc</color>
     <color name="silver">#ced7e0</color>
     <color name="black">#1D1C1C</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="yellow_100">#E7EB90</color>
-    <color name="red_100">#C73E1D</color>
-    <color name="colorSecondary">#ffab91</color>
     <color name="dark_silver">#7D7B7B</color>
 </resources>

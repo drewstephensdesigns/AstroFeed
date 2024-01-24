@@ -45,6 +45,7 @@ object Config {
 
     // launches
     const val SPACEX_UPCOMING_LAUNCHES = "launch/upcoming"
+    const val SPACEX_PREVIOUS_LAUNCHES = "launch/previous"
 
 
     const val LAUNCH_LINKS = "links"

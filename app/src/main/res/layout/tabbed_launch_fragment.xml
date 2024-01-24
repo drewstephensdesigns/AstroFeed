@@ -6,7 +6,7 @@
     android:orientation="vertical">
 
     <com.google.android.material.tabs.TabLayout
-        android:id="@+id/launch_tabLayout"
+        android:id="@+id/launch_tab_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:tabTextColor="?colorControlNormal"
@@ -19,7 +19,7 @@
         android:background="?attr/colorOnPrimary"/>
 
     <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/launch_viewPager"
+        android:id="@+id/launch_view_pager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"/>
