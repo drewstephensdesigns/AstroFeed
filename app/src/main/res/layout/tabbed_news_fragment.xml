@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         app:tabTextColor="?colorControlNormal"
         app:tabInlineLabel="true"
-        app:tabIconTint="@null"
+        app:tabIconTint="?colorControlNormal"
         app:tabIndicatorColor="@color/blue_200"
         app:tabIndicatorAnimationMode="elastic"
         app:tabIndicatorAnimationDuration="@integer/material_motion_duration_medium_2"

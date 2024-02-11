@@ -24,11 +24,15 @@ android {
 
     buildTypes {
         release {
+            multiDexEnabled = true
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+        }
+        debug {
+            isDebuggable = true
         }
     }
     compileOptions {
@@ -63,6 +67,7 @@ dependencies {
     // Room
     implementation ("androidx.room:room-runtime:2.6.1")
     implementation ("androidx.room:room-ktx:2.6.1")
+    implementation("androidx.preference:preference:1.2.1")
     ksp ("androidx.room:room-compiler:2.6.1")
 
     // Toasty

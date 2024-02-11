@@ -165,11 +165,11 @@
         android:id="@+id/line_break3"
         android:layout_width="150dp"
         android:layout_height="5dp"
+        android:layout_below="@id/text_launch_mission_orbit"
         android:layout_centerInParent="true"
         android:layout_marginTop="@dimen/medium_margin"
-        android:backgroundTint="@color/blue_200"
-        android:layout_below="@id/text_launch_mission_orbit"
-        android:background="@drawable/dashed_line"/>
+        android:background="@drawable/dashed_line"
+        android:backgroundTint="@color/blue_200" />
 
     <TextView
         android:id="@+id/text_launch_mission_launch_site_header"

@@ -42,7 +42,7 @@ interface SpaceService {
     suspend fun getArticles(
         @Query("limit") limit: Int,
         @Query("offset") offset: Int,
-        @Query("title") search: String = "Space"
+        @Query("title") search: String = "space"
     ) : NewsPaginatedResponse<News>
 
     @GET(Config.REDDIT_SUBREDDIT)

@@ -51,27 +51,4 @@
         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
         tools:text="About Devloper" />
 
-    <ImageView
-        android:id="@+id/icon_change_theme"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="60dp"
-        android:src="@drawable/ic_light_mode"
-        android:layout_below="@id/icon_about_developer"
-        android:contentDescription="@string/title_company"/>
-
-    <TextView
-        android:id="@+id/text_change_theme"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toEndOf="@id/icon_change_theme"
-        android:layout_alignTop="@id/icon_change_theme"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/roboto"
-        android:layout_below="@id/text_about_developer"
-        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
-        tools:text="@string/action_change_theme" />
-
 </RelativeLayout>

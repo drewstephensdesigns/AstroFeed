@@ -38,10 +38,20 @@ class PreviousLaunchesAdapter(
         holder.bind(previousLaunches[position])
     }
 
-    fun setPreviousLaunches(launches: List<LaunchResponse>){
+    fun setPreviousLaunches(launches: List<LaunchResponse>) {
+        val previousSize = previousLaunches.size
         previousLaunches = launches
-        //notifyDataSetChanged()
-        notifyItemChanged(launches.size)
+        val newSize = launches.size
+
+        // Calculate the range of items that were inserted
+        val itemCountInserted = newSize - previousSize
+
+        if (itemCountInserted > 0) {
+            // Use notifyItemRangeInserted to inform the adapter about the specific range of inserted items
+            notifyItemRangeInserted(previousSize, itemCountInserted)
+        } else {
+            notifyDataSetChanged()
+        }
     }
 
 

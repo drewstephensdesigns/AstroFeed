@@ -7,12 +7,13 @@ import androidx.lifecycle.viewModelScope
 import com.github.drewstephensdesigns.astrofeed.data.local.model.Rocket
 import com.github.drewstephensdesigns.astrofeed.data.remote.SpaceService
 import com.github.drewstephensdesigns.astrofeed.utils.Config
-import es.dmoral.toasty.Toasty
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.util.concurrent.TimeUnit
 
 class RocketViewModel(private val app : Application): AndroidViewModel(app) {
 
@@ -28,9 +29,16 @@ class RocketViewModel(private val app : Application): AndroidViewModel(app) {
     private fun fetchRockets(){
         viewModelScope.launch {
             try {
+                val client = OkHttpClient.Builder()
+                    .connectTimeout(10, TimeUnit.SECONDS)
+                    .writeTimeout(10, TimeUnit.SECONDS)
+                    .readTimeout(10, TimeUnit.SECONDS)
+                    .build()
+
                 val retrofit = Retrofit.Builder()
                     .baseUrl(Config.BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create())
+                    .client(client)
                     .build()
 
                 val service = retrofit.create(SpaceService::class.java)

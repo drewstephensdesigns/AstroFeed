@@ -7,13 +7,15 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.github.drewstephensdesigns.astrofeed.R
 import com.github.drewstephensdesigns.astrofeed.data.local.model.News
 import com.github.drewstephensdesigns.astrofeed.databinding.ArticleListItemBinding
 import com.github.drewstephensdesigns.astrofeed.utils.Config.loadImage
 import com.google.android.material.button.MaterialButton
+import java.text.SimpleDateFormat
+import java.util.Locale
+import java.util.TimeZone
 
 class NewsAdapter(
     private val context: Context
@@ -52,11 +54,23 @@ class NewsAdapter(
         fun bind(newsArticles: News){
             textNewsHeadline.text = newsArticles.title
             textNewsSummary.text = newsArticles.summary
-            textNewsPublished.text = context.resources.getString(R.string.article_published_at, newsArticles.publishedAt)
-            newsPublisher.text = newsArticles.newsSite
+
+            // Assuming launches.net is a String in the format "2024-01-23T04:03:00Z"
+            val dateFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.getDefault())
+            dateFormat.timeZone = TimeZone.getTimeZone("GMT")
+
+            val launchTime = dateFormat.parse(newsArticles.publishedAt!!)
+
+            // Convert to local time zone
+            val localDateFormat = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault())
+            localDateFormat.timeZone = TimeZone.getDefault()
+
+            val localPublishedTime = localDateFormat.format(launchTime!!)
+
+            textNewsPublished.text = context.resources.getString(R.string.article_published_at, localPublishedTime)
+            newsPublisher.text = context.resources.getString(R.string.article_published_by,newsArticles.newsSite)
 
             newsViewArticle.text = context.resources.getString(R.string.action_view_article)
-            newsViewArticle.setTextColor(ContextCompat.getColor(context, R.color.blue_100))
 
             newsViewArticle.setOnClickListener {
                 val intent = Intent(Intent.ACTION_VIEW)

@@ -5,6 +5,11 @@
     <color name="blue_200">#5591a9</color>
     <color name="blue_100">#9ccddc</color>
     <color name="silver">#ced7e0</color>
-    <color name="black">#1D1C1C</color>
+    <color name="anti_flash_white">#E0E0E0</color>
+    <color name="anti_flash_white_darker">#C3BEBE</color>
+    <color name="black">#2E2C2C</color>
+    <color name="black_darker">#001011</color>
     <color name="dark_silver">#7D7B7B</color>
+    <color name="outer_space">#4B4A4A</color>
+    <color name="gunmetal">#1D2734</color>
 </resources>

@@ -11,8 +11,10 @@ import com.github.drewstephensdesigns.astrofeed.utils.Config
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.util.concurrent.TimeUnit
 
 class RedditViewModel(private val app: Application) : AndroidViewModel(app) {
 
@@ -26,17 +28,24 @@ class RedditViewModel(private val app: Application) : AndroidViewModel(app) {
     private fun fetchRedditPosts(){
         viewModelScope.launch {
             try {
+                val client = OkHttpClient.Builder()
+                    .connectTimeout(10, TimeUnit.SECONDS)
+                    .writeTimeout(10, TimeUnit.SECONDS)
+                    .readTimeout(10, TimeUnit.SECONDS)
+                    .build()
+
                 val retrofit = Retrofit.Builder()
                     .baseUrl(Config.REDDIT_URL)
                     .addConverterFactory(GsonConverterFactory.create())
+                    .client(client)
                     .build()
 
                 val service = retrofit.create(SpaceService::class.java)
                 val response = withContext(Dispatchers.IO) {
                     service.getRedditFeed(
                         "space+spacex+spaceflight",
-                        order =  Config.REDDIT_PARAM_ORDER_HOT,
-                        limit = 150,
+                        order =  Config.REDDIT_PARAM_ORDER_NEW,
+                        limit = 200,
                         id = Config.REDDIT_QUERY_AFTER,
                     )
                 }

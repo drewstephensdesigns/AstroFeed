@@ -4,18 +4,18 @@
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/blue_500</item>
         <item name="colorPrimaryVariant">@color/blue_700</item>
-        <item name="colorOnPrimary">@color/silver</item>
+        <item name="colorOnPrimary">@color/anti_flash_white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/blue_200</item>
         <item name="colorSecondaryVariant">@color/blue_500</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
 
+        <item name="colorControlNormal">@color/outer_space</item>
     </style>
 
-    <!-- style="@style/AppTextButton.Icon" -->
+    <!-- Customize your theme here. -->
 
     <!-- Circle ImageView -->
     <style name="circleImageView" parent="">
@@ -29,8 +29,17 @@
         <item name="cornerSize">20%</item>
     </style>
 
-    <style name="AboutCard" parent="Theme.AstroFeed">
+    <!-- Material Button -->
+    <style name="materialButtonView" parent="">
+        <item name="android:backgroundTint">@color/blue_200</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="android:textColor">@color/silver</item>
+        <item name="android:textSize">16sp</item>
+        <item name="fontFamily">@font/noto_sans</item>
+    </style>
 
+    <!-- About Me Card -->
+    <style name="AboutCard" parent="Theme.AstroFeed">
         <item name="android:layout_marginStart">10dp</item>
         <item name="android:layout_marginEnd">10dp</item>
         <item name="android:layout_marginBottom">5dp</item>
@@ -40,11 +49,10 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="cardElevation">5dp</item>
-
     </style>
 
+    <!-- About Me Items -->
     <style name="AboutItem">
-
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">16sp</item>
@@ -57,5 +65,9 @@
         <item name="android:paddingBottom">15dp</item>
     </style>
 
-
+    <!-- FAB -->
+    <style name="FabExtendedMaterialTheme" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:backgroundTint">@color/blue_200</item>
+        <item name="iconTint">@color/anti_flash_white</item>
+    </style>
 </resources>

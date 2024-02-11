@@ -8,10 +8,6 @@ import androidx.core.content.getSystemService
 import com.github.drewstephensdesigns.astrofeed.R
 import com.squareup.picasso.Picasso
 import es.dmoral.toasty.Toasty
-import java.text.SimpleDateFormat
-import java.util.Calendar
-import java.util.Date
-import java.util.Locale
 
 object Config {
 
